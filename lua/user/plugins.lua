@@ -84,15 +84,23 @@ return packer.startup(function(use)
 	use({ "nvim-telescope/telescope.nvim", commit = "76ea9a898d3307244dce3573392dcf2cc38f340f" })
 
 	-- Treesitter
-	use({"nvim-treesitter/nvim-treesitter", commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac"})
+	use({ "nvim-treesitter/nvim-treesitter", commit = "8e763332b7bf7b3a426fd8707b7f5aa85823a5ac" })
 
 	-- Git
 	use({ "lewis6991/gitsigns.nvim", commit = "2c6f96dda47e55fa07052ce2e2141e8367cbaaf2" })
 
 	-- Mine
 	use("andweeb/presence.nvim")
-    use("wfxr/minimap.vim")
-    use("NLKNguyen/papercolor-theme")
+	use("wfxr/minimap.vim")
+	use("NLKNguyen/papercolor-theme")
+	use("instant-markdown/vim-instant-markdown")
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	})
+    use("tpope/vim-surround")
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
 	if PACKER_BOOTSTRAP then
