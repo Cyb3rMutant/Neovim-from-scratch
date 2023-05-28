@@ -15,6 +15,7 @@ configs.setup({
 		"tsx",
 		"css",
 		"rust",
+        "toml",
 		"java",
 		"yaml",
 		"markdown",
@@ -29,4 +30,9 @@ configs.setup({
 		enable = true,
 	},
 	indent = { enable = true, disable = { "python", "css" } },
+    rainbow = {
+        enable = true,
+        extended_mode = true,
+        max_file_lines = nil,
+    },
 })
